@@ -1,0 +1,38 @@
+@CHARSET "ISO-8859-1";
+
+.top{
+	background-color: #a2a2a2;
+	height:280px;
+}
+#toppic{
+	width:30%;
+	float:left;
+	padding-left:5%;
+	padding-right:5%;
+	padding-top:36px;
+}
+
+#toptitle{
+	width:50%;
+	float:left;
+	padding-left:5%;
+	padding-right:5%;
+	text-align:center;
+	padding-top:36px;
+	color: green;
+}
+.searching{
+	height:280px;
+	width: 100%;
+	background-color: orange;
+	clear: both;
+}
+#searchboxes{
+	width:30%;
+	float:left;
+	padding-left:5%;
+	padding-right:5%;
+	padding-top:36px;
+}
+
+ 
