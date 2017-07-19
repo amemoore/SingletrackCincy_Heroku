@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" href="main.css">
+	<title>STCincy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+	<body>
+			<div class="top" id="toppic">
+				<img src="images/trail.jpg" alt="Trail View" style="width:304px;height:228px;float:left;border:solid white 5px">
+			</div>
+			
+			<div class="top" id="toptitle">
+				<h1>Singletrack Cincy</h1>
+				<h2>Find your trail</h2>
+		    </div>
+		    
+		    <div class="searching">
+		    	<div id="searchBoxes">
+				    <form action="MainServlet" method="get">
+					    <label for="mydropdown" id="mydropdown">Select Park by Name:</label>    
+						<select name="mydropdown">
+							<option value="" disabled="disabled" selected="selected">Please select name</option>
+						    <option value="Mitchell Memorial Forest">Mitchell Memorial Forest</option>
+						    <option value="England-Idlewild">England-Idlewild</option>
+						    <option value="Devou Park">Devou Park</option>
+						</select>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+	</body>
+</html>

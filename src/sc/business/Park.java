@@ -1,46 +1,100 @@
 package sc.business;
 
 public class Park {
-	private String location;
-	private String description;
-	private String otherActivities;
-	private boolean restroom;
+	private String parkName;
+	private String area;
+	private String address;
+	private String city;
+	private String state;
+	private String zip;
+	private String other;
+	private String restrooms;
 	
 	public Park(){
 	}
-
-	public String getLocation() {
-		return location;
+	
+	public Park(String parkNameIn, String areaIn, String addressIn, String cityIn, String stateIn, String zipIn, 
+			String otherIn, String restroomsIn){
+		parkName=parkNameIn;
+		area = areaIn;
+		address = addressIn;
+		city = cityIn;
+		state = stateIn;
+		zip = zipIn;
+		other = otherIn;
+		restrooms = restroomsIn;
 	}
 
-	public void setLocation(String location) {
-		this.location = location;
+	public String getParkName() {
+		return parkName;
 	}
 
-	public String getDescription() {
-		return description;
+	public void setParkName(String parkName) {
+		this.parkName = parkName;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public String getArea() {
+		return area;
 	}
 
-	public String getOtherActivities() {
-		return otherActivities;
+	public void setArea(String area) {
+		this.area = area;
 	}
 
-	public void setOtherActivities(String otherActivities) {
-		this.otherActivities = otherActivities;
+	public String getAddress() {
+		return address;
 	}
 
-	public boolean isRestroom() {
-		return restroom;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public void setRestroom(boolean restroom) {
-		this.restroom = restroom;
+	public String getCity() {
+		return city;
 	}
 
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public String getOther() {
+		return other;
+	}
+
+	public void setOther(String other) {
+		this.other = other;
+	}
+
+	public String getRestrooms() {
+		return restrooms;
+	}
+
+	public void setRestrooms(String restrooms) {
+		this.restrooms = restrooms;
+	}
+
+	@Override
+	public String toString(){
+		return parkName ;
+		
+	}
+	
 	
 	
 }

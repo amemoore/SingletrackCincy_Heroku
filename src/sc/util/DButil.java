@@ -9,17 +9,24 @@ public class DButil {
 	    private static Connection connection;
 	    
 	    private DButil() {}
-
 	    
-	    //As of 16Jul2017 -- Change details when MySQL is working//
+	    
 	    
 	    public static synchronized Connection getConnection()  {
-	            try {
+	            
+	    	try {
+				Class.forName("com.mysql.jdbc.Driver");
+			} catch (ClassNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+	    	
+	    	try {
 	                // set the db url, username, and password
-	                String url = "jdbc:mysql://localhost:3306/prs";
-	                String username = "prs_user";
-	                String password = "sesame";
-
+	                String url = "jdbc:mysql://localhost:3306/stcincy";
+	                String username = "stcincy_user";
+	                String password = "ses79aOleme";
+	                
 	                // get and return connection
 	                connection = DriverManager.getConnection(
 	                        url, username, password);
