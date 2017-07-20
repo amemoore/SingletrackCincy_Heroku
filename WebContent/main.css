@@ -1,43 +1,41 @@
 @CHARSET "ISO-8859-1";
 
 .top{
-	background-color: #a2a2a2;
-	height:280px;
-	border:bottom white 5px;
-}
-#toppic{
-	width:30%;
-	float:left;
-	padding-left:5%;
-	padding-right:5%;
-	padding-top:36px;
+	background-image: url("images/fatbike2.jpg");
+	height: 525px;
+	margin: 0 auto;
 }
 
 #toptitle{
-	width:50%;
-	float:left;
-	padding-left:5%;
-	padding-right:5%;
+	font-family: verdana, Sans-serif;
+	font-size: 50px;
 	text-align:center;
-	padding-top:36px;
-	color: #2ebf1e;
+ 	padding-top:1px; 
+	color:white;
+	margin: 0 auto;
 }
 
-h1, h2{
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+h2{
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
 }
+
 .searching{
-	height:280px;
-	background-color: #2ebf1e;
-	clear: both;
+	height:500px;
+	background-color: #3b3b3b;
+	margin: 0 auto;
 }
-#searchBoxes{
-	width:30%;
+.half-width{
+	width:50%;
 	float:left;
-	padding-left:5%;
-	padding-right:5%;
+}
+.searchBoxes{
 	margin-top:36px;
 	text-align: center;
+	color: white;
+	padding-top:25px;
 }
 
  

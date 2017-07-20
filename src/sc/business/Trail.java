@@ -1,6 +1,6 @@
 package sc.business;
 
-public class Trail {
+public class Trail extends Park{
 	
 	private String difficulty;
 	private String obstacleDescription;

@@ -9,28 +9,48 @@
 
 
 	<body>
-			<div class="top" id="toppic">
-				<img src="images/trail.jpg" alt="Trail View" style="width:304px;height:228px;float:left;border:solid white 5px">
-			</div>
-			
-			<div class="top" id="toptitle">
-				<h1>Singletrack Cincy</h1>
-				<h2>Find your trail</h2>
-		    </div>
-		    
-		    <div class="searching">
-		    	<div id="searchBoxes">
-				    <form action="MainServlet" method="get">
-					    <label for="mydropdown" id="mydropdown">Select Park by Name:</label>    
-						<select name="mydropdown">
-							<option value="" disabled="disabled" selected="selected">Please select name</option>
-						    <option value="Mitchell Memorial Forest">Mitchell Memorial Forest</option>
-						    <option value="England-Idlewild">England-Idlewild</option>
-						    <option value="Devou Park">Devou Park</option>
-						</select>
-						<input type="submit" value="Submit">
-					</form>
+		<header>
+			<section class="top" >
+				<div id="toptitle">
+					<h1 >GET ON IT</h1>
 				</div>
-			</div>
+		    </section>
+		 </header>
+		    
+		 <main>
+		    <section class="searching">
+			    	<div class="full-width">
+			    		<h2>Singletrack Cincy - Find your trail</h2>
+			    	</div>
+			    	
+			    	<div  class="half-width">
+					    <form action="MainServlet" method="get" class="searchBoxes">
+						    <label for="namedropdown" id="namedropdown">Select Park by Name:</label>    
+							<select name="namedropdown">
+								<option value="" disabled="disabled" selected="selected">Please select name</option>
+							    <option value="Mitchell Memorial Forest">Mitchell Memorial Forest</option>
+							    <option value="England-Idlewild">England-Idlewild</option>
+							    <option value="Devou Park">Devou Park</option>
+							</select>
+							<input type="submit" value="Submit">
+						</form>
+					</div>
+					
+					<div class="half-width">	
+						<form action="MainServlet" method="get" class="searchBoxes" >
+						    <label for="areadropdown" id="areadropdown">Select Park by Area:</label>    
+							<select name="areadropdown">
+								<option value="" disabled="disabled" selected="selected">Please select area</option>
+							    <option value="NE">Northeast</option>
+							    <option value="SE">Southeast</option>
+							    <option value="NW">Northwest</option>
+							    <option value="SW">Southwest</option>
+							</select>
+							<input type="submit" value="Submit">
+						</form>
+					</div>
+					
+			</section>
+		</main>
 	</body>
 </html>

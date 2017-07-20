@@ -22,36 +22,52 @@ public class MainServlet extends HttpServlet {
      */
     public MainServlet() {
         super();
-        // TODO Auto-generated constructor stub
+       
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    
+//WIP -- Directing traffic through name, area, or trail type search boxes
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("In the Servlet - Do Get");
 		
 		String url = "/index.html";	
-		String value = (String) request.getParameter("mydropdown");
-		String parkName;
-		Park parks;
-		ParkDAO parksDAO = Factory.getParkDAO();
-		Park currentPark = parksDAO.getPark(value);	
-		request.setAttribute("parks", currentPark);
+	    ParkDAO parksDAO=Factory.getParkDAO();;
 		
-		if (value.equals("Mitchell Memorial Forest")){
-			url = "/mitchell.jsp";
-		}
-		else if (value.equals("England-Idlewild")){
-			url = "/england.jsp";
-		}
-		else if (value.equals("Devou Park")){
-			url = "/devou.jsp";
-		}
+		String name = (String) request.getParameter("namedropdown");
+		String area = (String) request.getParameter("areadropdown");
 		
+		if (name!=null){
+			Park currentPark = parksDAO.getPark(name);	
+			request.setAttribute("parks", currentPark);
+			
+			if (name.equals("Mitchell Memorial Forest")){
+				url = "/mitchell.jsp";
+			}
+			else if (name.equals("England-Idlewild")){
+				url = "/england.jsp";
+			}
+			else if (name.equals("Devou Park")){
+				url = "/devou.jsp";
+			} 
+		}
+		else if (area!=null){
+			Park currentPark = parksDAO.getPark(area);	
+			request.setAttribute("parks", currentPark);
+			
+			if (area.equals("NE")){
+			}
+			else if (area.equals("SE")){
+			}
+			else if (area.equals("NW")){
+			} 
+			else if (area.equals("SW")){
+			} 
+			url = "/area.jsp";
+		}
 		
 		getServletContext().getRequestDispatcher(url).forward(request, response);
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
