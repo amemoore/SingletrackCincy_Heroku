@@ -19,7 +19,7 @@
 		    
 		 <main>
 		    <section class="searching">
-			    	<div class="full-width">
+			    	<div >
 			    		<h2>Singletrack Cincy - Find your trail</h2>
 			    	</div>
 			    	
@@ -50,6 +50,20 @@
 						</form>
 					</div>
 					
+					<div class="full-width" id="someRoom">
+						<div class="thirdBox">	
+						<form action="MainServlet" method="get"  >
+						    <label for="leveldropdown" id="leveldropdown">Select Park by difficulty level</label>
+							<select name="leveldropdown">
+								<option value="" disabled="disabled" selected="selected">Please select desired difficulty level</option>
+							    <option value="NE">Easy</option>
+							    <option value="SE">Intermediate</option>
+							    <option value="NW">Advanced</option>
+							</select>
+							<input type="submit" value="Submit">
+						</form>
+						</div>
+					</div>
 			</section>
 		</main>
 	</body>

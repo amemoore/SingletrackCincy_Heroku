@@ -15,6 +15,13 @@
 	margin: 0 auto;
 }
 
+h1{
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+}
+
 h2{
 	margin: 0 auto;
 	color: white;
@@ -27,15 +34,59 @@ h2{
 	background-color: #3b3b3b;
 	margin: 0 auto;
 }
+
 .half-width{
 	width:50%;
 	float:left;
 }
+
+.full-width{
+	width:100%;
+}
+
 .searchBoxes{
 	margin-top:36px;
 	text-align: center;
 	color: white;
-	padding-top:25px;
+	padding-top:50px;
 }
+
+.thirdBox{
+	margin-top:36px;
+	text-align: center;
+	color: white;
+	padding-top:100px;
+}
+
+#someRoom{
+	padding-top:100px;
+}
+
+/* CSS Specific to JSP Pages */
+
+.jspTop{
+	background-image: url("images/mountain-bike-med.jpg");
+	background-image: cover;
+	height: 300px;
+	margin: 0 auto;
+}
+.jspBottom{
+	height:500px;
+	background-color: #3b3b3b;
+	margin: 0 auto;
+}
+.jspTables{
+	color: white;
+	padding-top: 50px;
+}
+
+
+
+
+
+
+
+
+
 
  

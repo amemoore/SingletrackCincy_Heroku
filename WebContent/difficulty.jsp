@@ -4,10 +4,9 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>England-Idlewild</title>
+	<title>Trails by Difficulty Level</title>
 </head>
-
 <body>
-	<h2>WIP - England-Idlewild JSP</h2>
+
 </body>
 </html>
