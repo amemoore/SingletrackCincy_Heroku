@@ -10,14 +10,11 @@ public class DButil {
 	    
 	    private DButil() {}
 	    
-	    
-	    
 	    public static synchronized Connection getConnection()  {
 	            
 	    	try {
 				Class.forName("com.mysql.jdbc.Driver");
 			} catch (ClassNotFoundException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 	    	

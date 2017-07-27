@@ -1,5 +1,9 @@
 package sc.trail.db;
 
-public interface TrailReader {
+import java.util.LinkedList;
+import sc.business.Trail;
 
+public interface TrailReader {
+	LinkedList<Trail> getTrailsByPark(String parkName);
+	LinkedList<Trail> getTrailsByDifficulty(String difficultyLevel);
 }

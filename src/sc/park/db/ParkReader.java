@@ -1,5 +1,7 @@
 package sc.park.db;
 
-public interface ParkReader {
+import sc.business.Park;
 
+public interface ParkReader {
+	Park getPark(String parkName);
 }

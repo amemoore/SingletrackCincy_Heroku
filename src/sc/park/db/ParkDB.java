@@ -10,7 +10,7 @@ import sc.util.DButil;
 
 public class ParkDB implements ParkDAO{
 	
-	//Getting park information from the db
+	//Getting Park Information From DB
 		public Park getPark(String park){
 			Park parks = new Park();
 			String sql = " SELECT * FROM parks "
@@ -20,7 +20,6 @@ public class ParkDB implements ParkDAO{
 						ps.setString(1,  park); 
 						ResultSet rs = ps.executeQuery();
 	        	while (rs.next()){
-	        		int parkId = rs.getInt(1);
 	        		String parkName = rs.getString(2);
 	                String area = rs.getString(3);
 					String address = rs.getString(4);
@@ -37,5 +36,4 @@ public class ParkDB implements ParkDAO{
 	        }
 			return parks;
 		}
-
 }

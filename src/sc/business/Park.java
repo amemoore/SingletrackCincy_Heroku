@@ -88,13 +88,4 @@ public class Park {
 	public void setRestrooms(String restrooms) {
 		this.restrooms = restrooms;
 	}
-
-	@Override
-	public String toString(){
-		return parkName ;
-		
-	}
-	
-	
-	
 }

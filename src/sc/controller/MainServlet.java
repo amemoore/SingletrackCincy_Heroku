@@ -1,14 +1,18 @@
 package sc.controller;
 
 import java.io.IOException;
+import java.util.LinkedList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import sc.business.Park;
+import sc.business.Trail;
 import sc.factory.Factory;
 import sc.park.db.ParkDAO;
+import sc.trail.db.TrailDAO;
 
 /**
  * Servlet implementation class MainServlet
@@ -22,60 +26,72 @@ public class MainServlet extends HttpServlet {
      */
     public MainServlet() {
         super();
-       
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
     
-//WIP -- Directing traffic through name, area, or trail type search boxes
+//WIP -- Directing Traffic From Name, Area, and Difficulty Dropdown Boxes
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		String url = "/index.html";	
-	    ParkDAO parksDAO=Factory.getParkDAO();;
+		String message = "";
+	    ParkDAO parksDAO=Factory.getParkDAO();
+	    TrailDAO trailsDAO=Factory.getTrailDAO();
 		
-		String name = (String) request.getParameter("namedropdown");
-		String area = (String) request.getParameter("areadropdown");
+		String nameDropDown = (String) request.getParameter("namedropdown");
+		String areaDropDown = (String) request.getParameter("areadropdown");
+		String difficultyDropDown = (String) request.getParameter("difficultydropdown");
 		
-		if (name!=null){
-			Park currentPark = parksDAO.getPark(name);	
-			request.setAttribute("parks", currentPark);
+		if (nameDropDown!=null){
+			//Getting Park by Name - Setting for JSP
+				Park currentPark = parksDAO.getPark(nameDropDown);	
+				request.setAttribute("parks", currentPark);
+			//Getting All Trails for Park - Setting for JSP
+				LinkedList<Trail> currentTrails = trailsDAO.getTrailsByPark(currentPark.getParkName());
+				request.setAttribute("trails", currentTrails);
 			
-			if (name.equals("Mitchell Memorial Forest")){
-				url = "/mitchell.jsp";
-			}
-			else if (name.equals("England-Idlewild")){
-				url = "/england.jsp";
-			}
-			else if (name.equals("Devou Park")){
-				url = "/devou.jsp";
-			} 
+					if (nameDropDown.equals("Mitchell Memorial Forest")){
+						url = "/mitchell.jsp";
+					}
+					else if (nameDropDown.equals("England-Idlewild")){
+						url = "/england.jsp";
+					}
+					else if (nameDropDown.equals("Devou Park")){
+						url = "/devou.jsp";
+					} 
 		}
-		else if (area!=null){
-			Park currentPark = parksDAO.getPark(area);	
-			request.setAttribute("parks", currentPark);
-			
-			if (area.equals("NE")){
-			}
-			else if (area.equals("SE")){
-			}
-			else if (area.equals("NW")){
-			} 
-			else if (area.equals("SW")){
-			} 
-			url = "/area.jsp";
+		else if (difficultyDropDown!=null){
+			//Getting All Trails By Difficulty Level - Setting for JSP
+				LinkedList<Trail> currentTrails = trailsDAO.getTrailsByDifficulty(difficultyDropDown);
+				request.setAttribute("trails", currentTrails);
+					if (difficultyDropDown.equals("beginner")){
+						message = "Beginner Trails";
+					}
+					else if (difficultyDropDown.equals("easy")){
+						message = "Easy Trails";
+					}
+					else if (difficultyDropDown.equals("intermediate")){
+						message = "Intermediat Trails";
+					} 
+					else if (difficultyDropDown.equals("advanced")){
+						message = "Advanced Trails";
+					} 
+					url = "/difficulty.jsp";
 		}
+		/*else if (areaDropDown!=null){
+				if (areaDropDown.equals("NE")){
+				}
+				else if (areaDropDown.equals("SE")){
+				}
+				else if (areaDropDown.equals("NW")){
+				} 
+				else if (areaDropDown.equals("SW")){
+				} 
+				url = "/area.jsp";
+	}*/
 		
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
 }
