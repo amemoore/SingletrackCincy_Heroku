@@ -1,18 +1,17 @@
 @CHARSET "ISO-8859-1";
 
-.top{
-	background-image: url("images/fatbike2.jpg");
-	height: 525px;
-	margin: 0 auto;
+/* For All Sections */
+
+.half-width{
+	width:40%;
+	float:left;
+	color: white;
+	padding: 0 5%;
 }
 
-#toptitle{
-	font-family: verdana, Sans-serif;
-	font-size: 50px;
-	text-align:center;
- 	padding-top:1px; 
-	color:white;
-	margin: 0 auto;
+.full-width{
+	width:100%;
+	color: white;
 }
 
 h1{
@@ -24,42 +23,95 @@ h1{
 
 h2{
 	margin: 0 auto;
+	color:white;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+h3{
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+}
+h4{
+	margin: 0 auto;
 	color: white;
 	text-align: center;
 	padding-top: 20px;
 }
 
+.centerText{
+	text-align: center;
+}
+
+/* Header Section */
+
+.top{
+	background-image: url("images/fatbike2.jpg");
+	height: 350px;
+	margin: 0 auto;
+	border-bottom: solid #912636 5px;
+}
+
+#toptitle{
+	font-family: verdana, Sans-serif;
+	font-size: 30px;
+	text-align:center;
+ 	padding-top:50px; 
+	color:white;
+	margin: 0 auto;
+	width: 20%;
+	float: left;
+}
+
+/* Main Section */
+
 .searching{
-	height:500px;
+	height:400px;
 	background-color: #3b3b3b;
 	margin: 0 auto;
 }
 
-.half-width{
-	width:50%;
-	float:left;
-}
-
-.full-width{
-	width:100%;
-}
-
 .searchBoxes{
-	margin-top:36px;
+	margin-top:20px;
+	margin-bottom: 20px;
 	text-align: center;
 	color: white;
-	padding-top:50px;
 }
 
-.thirdBox{
-	margin-top:36px;
+#drops{
+	width: 175px;
+}
+
+/* Footer Section */
+
+.bottom{
+	height:250px;
+	background-color: #912636;
+	margin: 0 auto;
+}
+.admin{
+	margin: 0 auto;
 	text-align: center;
 	color: white;
-	padding-top:100px;
+	padding-top: 110px;
 }
 
-#someRoom{
-	padding-top:100px;
+.emailTitle{
+	padding-top: 30px;
+}
+.email{
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+	padding-top: 20px;
+}
+#copyright {
+    text-align: center;
+    clear:all;
+    padding-top: 20px;
 }
 
 /* CSS Specific to JSP Pages */

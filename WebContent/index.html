@@ -19,52 +19,85 @@
 		    
 		 <main>
 		    <section class="searching">
-			    	<div >
+			    	<div class="full-width">
 			    		<h2>Singletrack Cincy - Find your trail</h2>
 			    	</div>
 			    	
 			    	<div  class="half-width">
-					    <form action="MainServlet" method="get" class="searchBoxes">
-						    <label for="namedropdown" id="namedropdown">Select Park by Name:</label>    
-							<select name="namedropdown">
-								<option value="" disabled="disabled" selected="selected">Please select name</option>
-							    <option value="Mitchell Memorial Forest">Mitchell Memorial Forest</option>
-							    <option value="England-Idlewild">England-Idlewild</option>
-							    <option value="Devou Park">Devou Park</option>
-							</select>
-							<input type="submit" value="Submit">
+			    		<p>In pertinax similique sadipscing quo, detracto corrumpit definiebas mei cu, in eleifend mediocritatem qui. 
+			    			Recteque omittantur sed ut, cu semper mentitum periculis sed. Salutatus gubergren incorrupte cu nam, qui ceteros 
+			    			fierent argumentum an. Omittantur adversarium an his, at alterum sapientem sententiae mei. At duo tota probo 
+			    			ancillae, at nulla ancillae elaboraret qui. Cu odio officiis sapientem eam, in molestie assentior contentiones pro.
+							Mea falli harum numquam et, vim in dicta mollis, vis an ferri iudico. Dolore utamur eos ei. His lorem assueverit ne. 
+							Ut nam dicam iudico omittantur, est feugait blandit in, natum dicit tollit et ius. Quo te quas causae dolorum.
+			    		</p>
+			    	</div>
+			    	
+			    	<div  class="half-width">
+			    		<h3>Select Your Trail</h3>
+						    <form action="MainServlet" method="get" class="searchBoxes">
+							    <label for="namedropdown" id="namedropdown">By Park Name:</label>    
+								<select name="namedropdown" id="drops">
+									<option  value="" disabled="disabled" selected="selected">Please select</option>
+								    <option  value="Mitchell Memorial Forest">Mitchell Memorial Forest</option>
+								    <option  value="England-Idlewild">England-Idlewild</option>
+								    <option  value="Devou Park">Devou Park</option>
+								</select>
+								<input type="submit" value="Submit">
+							</form>
+							
+							<p class="centerText">Or</p>
+							
+							<form action="MainServlet" method="get" class="searchBoxes">
+							    <label for="leveldropdown" id="leveldropdown">By Difficulty Level:</label>
+								<select name="leveldropdown" id="drops" >
+									<option  value="" disabled="disabled" selected="selected">Please select</option>
+								    <option  value="Easy">Easy</option>
+								    <option  value="Intermediate">Intermediate</option>
+								    <option  value="Advanced">Advanced</option>
+								</select>
+								<input type="submit" value="Submit">
+							</form>
+							
+							<p class="centerText">Or</p>
+							
+							<form action="MainServlet" method="get" class="searchBoxes" >
+							    <label for="areadropdown" id="areadropdown">By Area:</label>    
+								<select name="areadropdown" id="drops">
+									<option value="" disabled="disabled" selected="selected">Please select</option>
+								    <option value="NE">Northeast</option>
+								    <option value="SE">Southeast</option>
+								    <option value="NW">Northwest</option>
+								    <option value="SW">Southwest</option>
+								</select>
+								<input type="submit" value="Submit">
 						</form>
-					</div>
-					
-					<div class="half-width">	
-						<form action="MainServlet" method="get" class="searchBoxes" >
-						    <label for="areadropdown" id="areadropdown">Select Park by Area:</label>    
-							<select name="areadropdown">
-								<option value="" disabled="disabled" selected="selected">Please select area</option>
-							    <option value="NE">Northeast</option>
-							    <option value="SE">Southeast</option>
-							    <option value="NW">Northwest</option>
-							    <option value="SW">Southwest</option>
-							</select>
-							<input type="submit" value="Submit">
-						</form>
-					</div>
-					
-					<div class="full-width" id="someRoom">
-						<div class="thirdBox">	
-						<form action="MainServlet" method="get"  >
-						    <label for="leveldropdown" id="leveldropdown">Select Park by difficulty level</label>
-							<select name="leveldropdown">
-								<option value="" disabled="disabled" selected="selected">Please select desired difficulty level</option>
-							    <option value="NE">Easy</option>
-							    <option value="SE">Intermediate</option>
-							    <option value="NW">Advanced</option>
-							</select>
-							<input type="submit" value="Submit">
-						</form>
-						</div>
 					</div>
 			</section>
 		</main>
+		
+		<footer>
+			<section class="bottom">
+			
+				<div  class="half-width">
+						<form action="AdminServlet" class="admin">
+    						<input type="submit" value="Admin Sign In" />
+						</form>
+				</div>
+				
+<!-- 				<div  class="half-width"> -->
+					
+<!-- 						<h4 class="emailTitle">Singletrack Cincy welcomes suggestions.</h4> -->
+<!-- 					<div class="email"> -->
+<!-- 						<a  href="mailto:amemoore35@gmail.com"><img src="images/mail.png"></a> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+			
+				<div id="copyright">
+					<p >&copy 2017</p>
+				</div>
+				
+			</section>
+		</footer>
 	</body>
 </html>
