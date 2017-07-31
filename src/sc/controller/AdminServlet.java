@@ -18,10 +18,13 @@ public class AdminServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("in the Admin Servlet");
 		String url = "/index.html";	
-		//String commentString = (String) request.getParameter("comments");
+		String commentString = (String) request.getParameter("comments");
 		
-		//if (commentString!=null)
-			url = "/comments.jsp";
+		if (commentString!=null){
+			
+			
+			
+		}
 		
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 		response.getWriter().append("Served at: ").append(request.getContextPath());
