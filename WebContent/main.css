@@ -1,6 +1,6 @@
 @CHARSET "ISO-8859-1";
 
-/* For All Sections */
+/* FOR ALL SECTIONS */
 
 .half-width{
 	width:40%;
@@ -14,28 +14,7 @@
 	color: white;
 }
 
-h1{
-	margin: 0 auto;
-	color: white;
-	text-align: center;
-	padding-top: 20px;
-}
-
-h2{
-	margin: 0 auto;
-	color:white;
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-h3{
-	margin: 0 auto;
-	color: white;
-	text-align: center;
-	padding-top: 20px;
-}
-h4{
+h1, h2, h3, h4{
 	margin: 0 auto;
 	color: white;
 	text-align: center;
@@ -46,7 +25,7 @@ h4{
 	text-align: center;
 }
 
-/* Header Section */
+/* HEADER SECTION */
 
 .top{
 	background-image: url("images/fatbike2.jpg");
@@ -66,9 +45,9 @@ h4{
 	float: left;
 }
 
-/* Main Section */
+/* MAIN SECTION */
 
-.searching{
+.mainSection{
 	height:400px;
 	background-color: #3b3b3b;
 	margin: 0 auto;
@@ -85,13 +64,14 @@ h4{
 	width: 175px;
 }
 
-/* Footer Section */
+/* FOOTER SECTION */
 
 .bottom{
 	height:250px;
 	background-color: #912636;
 	margin: 0 auto;
 }
+
 .admin{
 	margin: 0 auto;
 	text-align: center;
@@ -99,22 +79,24 @@ h4{
 	padding-top: 110px;
 }
 
-.emailTitle{
-	padding-top: 30px;
+.commentsTitle{
+	padding-top: 85px;
 }
-.email{
+
+.comments{
 	margin: 0 auto;
 	text-align: center;
 	color: white;
-	padding-top: 20px;
+	padding-top: 15px;
 }
+
 #copyright {
     text-align: center;
     clear:all;
     padding-top: 20px;
 }
 
-/* CSS Specific to JSP Pages */
+/* JSP PAGES */
 
 .jspTop{
 	background-image: url("images/mountain-bike-med.jpg");
@@ -122,10 +104,22 @@ h4{
 	height: 300px;
 	margin: 0 auto;
 }
+
 .jspBottom{
 	height:500px;
 	background-color: #3b3b3b;
 	margin: 0 auto;
+}
+
+.commentArea{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.commentSubmit{
+	margin-top: 20px;
+	color: black;
+	text-align: center;
 }
 .jspTables{
 	color: white;
