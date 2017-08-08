@@ -14,18 +14,31 @@
 	</div>
 	
 	<div class="jspBottom">
-		<h3>Leave comments or suggestions below:</h3>
-		
-		<form action="Admin/Servlet" method="post">
-		
-			<div class="commentArea">
+		<h3 class="commentsTitle">Leave comments or suggestions below:</h3>
+		<div class="centerText">
+		<form action="AdminServlet" method="post">
+			<div class="jspInputTextArea">
+				Name<br>
+				<input type="text" name="name">
+				<br>
+			</div>
+			<div class="jspInputTextArea">
+				Email<br>
+				<input type="email" name="email">
+				<br>
+			</div>
+			<div class="jspInputTextArea">
+				<h4>${message}</h4>
+				Comments<br>
 				<textarea name="comments" id="comments" rows="7" cols="60" style="font-family:sans-serif;font-size:1.0em;">
 				</textarea>
-			</div>
-			<div class="commentSubmit">
+				<br>
+				<div class="jspInputTextArea">
 				<input type="submit" value="Submit" >
+				</div>
 			</div>
 		</form>
+		</div>
 	</div>
 	
 	

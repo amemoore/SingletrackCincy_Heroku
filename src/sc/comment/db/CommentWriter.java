@@ -1,5 +1,7 @@
 package sc.comment.db;
 
-public interface CommentWriter {
+import sc.business.Comments;
 
+public interface CommentWriter {
+	public void addComment(Comments c);
 }

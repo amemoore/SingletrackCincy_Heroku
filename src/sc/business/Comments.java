@@ -9,6 +9,12 @@ public class Comments {
 	
 	public Comments(){
 	}
+	
+	public Comments(String nameIn, String emailIn, String commentsIn){
+		name =  nameIn;
+		email = emailIn;
+		comments = commentsIn;
+	}
 
 	public String getName() {
 		return name;

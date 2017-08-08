@@ -69,7 +69,7 @@ public class MainServlet extends HttpServlet {
 						message = "Easy Trails";
 					}
 					else if (difficultyDropDown.equals("intermediate")){
-						message = "Intermediat Trails";
+						message = "Intermediate Trails";
 					} 
 					else if (difficultyDropDown.equals("advanced")){
 						message = "Advanced Trails";

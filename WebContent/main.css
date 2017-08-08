@@ -25,7 +25,7 @@ h1, h2, h3, h4{
 	text-align: center;
 }
 
-/* HEADER SECTION */
+/* LANDING PAGE HEADER SECTION */
 
 .top{
 	background-image: url("images/fatbike2.jpg");
@@ -45,7 +45,7 @@ h1, h2, h3, h4{
 	float: left;
 }
 
-/* MAIN SECTION */
+/* LANDING PAGE MAIN SECTION */
 
 .mainSection{
 	height:400px;
@@ -60,11 +60,11 @@ h1, h2, h3, h4{
 	color: white;
 }
 
-#drops{
+#dropDowns{
 	width: 175px;
 }
 
-/* FOOTER SECTION */
+/* LANDING PAGE FOOTER SECTION */
 
 .bottom{
 	height:250px;
@@ -80,7 +80,8 @@ h1, h2, h3, h4{
 }
 
 .commentsTitle{
-	padding-top: 85px;
+	padding-top: 50px;
+	padding-bottom:25px;
 }
 
 .comments{
@@ -93,7 +94,7 @@ h1, h2, h3, h4{
 #copyright {
     text-align: center;
     clear:all;
-    padding-top: 20px;
+    padding-top: 80px;
 }
 
 /* JSP PAGES */
@@ -111,16 +112,17 @@ h1, h2, h3, h4{
 	margin: 0 auto;
 }
 
-.commentArea{
-	margin-top: 50px;
+.jspInputTextArea{
+	width: 100%;
 	text-align: center;
+	margin-top: 20px;
+	padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    text-align: center;
+	color:white;
 }
 
-.commentSubmit{
-	margin-top: 20px;
-	color: black;
-	text-align: center;
-}
 .jspTables{
 	color: white;
 	padding-top: 50px;
