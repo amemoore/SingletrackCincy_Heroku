@@ -24,5 +24,5 @@ public class CommentDB implements CommentDAO{
 	    catch (SQLException e) {
 	        System.out.println(e);
 	    }
-}
+	}
 }

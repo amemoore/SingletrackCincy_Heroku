@@ -13,9 +13,11 @@
 	
 	<div class="jspBottom">
 		<h3> Thank you for submitting comments/suggestions.</h3>
-		<form action="index.html">
-    		<input type="submit" value="Go to Home Page" />
-		</form>
+			<div class="jspInputTextArea">
+				<form action="index.html">
+    				<input type="submit" value="Go to Home Page" />
+			</form>
+		</div>
 	</div>
 
 </body>

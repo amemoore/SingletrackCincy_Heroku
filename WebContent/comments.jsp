@@ -16,7 +16,8 @@
 	<div class="jspBottom">
 		<h3 class="commentsTitle">Leave comments or suggestions below:</h3>
 		<div class="centerText">
-		<form action="AdminServlet" method="post">
+		
+		<form action="CommentServlet" method="post">
 			<div class="jspInputTextArea">
 				Name<br>
 				<input type="text" name="name">
@@ -30,7 +31,7 @@
 			<div class="jspInputTextArea">
 				<h4>${message}</h4>
 				Comments<br>
-				<textarea name="comments" id="comments" rows="7" cols="60" style="font-family:sans-serif;font-size:1.0em;">
+				<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.0em;width:50%;">
 				</textarea>
 				<br>
 				<div class="jspInputTextArea">
