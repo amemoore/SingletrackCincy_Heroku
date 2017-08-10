@@ -5,5 +5,7 @@ import sc.business.Trail;
 
 public interface TrailReader {
 	LinkedList<Trail> getTrailsByPark(String parkName);
-	LinkedList<Trail> getTrailsByDifficulty(String difficultyLevel);
+	LinkedList<Trail> getTrailsByDifficultyLevel(String difficultyLevel);
+	LinkedList<Trail> getTrailsByArea(String area);
+	LinkedList<Trail> getAllTrails();
 }

@@ -86,4 +86,9 @@ public class Trail extends Park{
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
+
+	public String getFeatures() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

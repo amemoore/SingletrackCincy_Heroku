@@ -60,7 +60,7 @@ public class MainServlet extends HttpServlet {
 		}
 		else if (difficultyDropDown!=null){
 			//Getting All Trails By Difficulty Level - Setting for JSP
-				LinkedList<Trail> currentTrails = trailsDAO.getTrailsByDifficulty(difficultyDropDown);
+				LinkedList<Trail> currentTrails = trailsDAO.getTrailsByDifficultyLevel(difficultyDropDown);
 				request.setAttribute("trails", currentTrails);
 					if (difficultyDropDown.equals("beginner")){
 						message = "Beginner Trails";

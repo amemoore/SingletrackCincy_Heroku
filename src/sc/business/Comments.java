@@ -2,6 +2,7 @@ package sc.business;
 
 public class Comments {
 
+	private int id;
 	private String name;
 	private String email;
 	private String comments;
@@ -14,6 +15,17 @@ public class Comments {
 		name =  nameIn;
 		email = emailIn;
 		comments = commentsIn;
+	}
+	
+	public Comments(int idIn, String nameIn, String emailIn, String commentsIn){
+		id = idIn;
+		name =  nameIn;
+		email = emailIn;
+		comments = commentsIn;
+	}
+	
+	public int getId() {
+		return id;
 	}
 
 	public String getName() {
