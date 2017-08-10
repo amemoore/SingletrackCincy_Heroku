@@ -11,7 +11,7 @@
 	<div class="jspTop">
 	</div>
 	
-	<div class="jspBottom">
+	<div id="jspTYCommentPage">
 		<h3> Thank you for submitting comments/suggestions.</h3>
 			<div class="jspInputTextArea">
 				<form action="index.html">

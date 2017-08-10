@@ -13,7 +13,7 @@
 	<div class="jspTop">
 	</div>
 	
-	<div class="jspBottom">
+	<div class="jspMain">
 		<h3 class="commentsTitle">Leave comments or suggestions below:</h3>
 		<div class="centerText">
 		

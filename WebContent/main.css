@@ -21,6 +21,11 @@ h1, h2, h3, h4{
 	padding-top: 20px;
 }
 
+p{
+	color: white;
+	padding: 0px 50px;
+}
+
 .centerText{
 	text-align: center;
 }
@@ -106,11 +111,18 @@ h1, h2, h3, h4{
 	margin: 0 auto;
 }
 
-.jspBottom{
-	height:500px;
-	background-color: #3b3b3b;
+.jspMain{
+	background-color:#3b3b3b;
 	margin: 0 auto;
+	padding-bottom: 100px;
 }
+
+#jspTYCommentPage{
+	background-color:#3b3b3b;
+	margin: 0 auto;
+	height: 350px;
+}
+
 
 .jspInputTextArea{
 	width: 100%;
@@ -128,7 +140,16 @@ h1, h2, h3, h4{
 	padding-top: 50px;
 }
 
+.trailTitle{
+	font-size: 18px;
+	text-decoration: underline;
+	padding: 10px;
+}
 
+#webBackground{
+	background: #225fa8;
+	color: white;
+}
 
 
 
