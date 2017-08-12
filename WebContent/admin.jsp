@@ -11,7 +11,7 @@
 
 <!-- WIP - Space for Admin to add, delete, and update parks, trails, comments -->
 
-<h1> In the Admin Servlet</h1>
+<h1> In the Admin JSP</h1>
 
 
 
