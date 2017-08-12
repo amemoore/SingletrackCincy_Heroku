@@ -3,19 +3,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Admin</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
 </head>
-
 <body>
-
-<!-- WIP - Space for Admin to add, delete, and update parks, trails, comments -->
-
-<h1> In the Admin Servlet</h1>
-
-
-
-
 
 </body>
 </html>

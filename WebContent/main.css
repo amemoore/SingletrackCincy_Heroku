@@ -14,16 +14,19 @@
 	color: white;
 }
 
+.white{
+	color:white;
+}
+
 h1, h2, h3, h4{
 	margin: 0 auto;
 	color: white;
 	text-align: center;
 	padding-top: 20px;
-}
+} 
 
 p{
 	color: white;
-	padding: 0px 50px;
 }
 
 .centerText{
@@ -137,10 +140,10 @@ p{
 
 .jspTables{
 	color: white;
-	padding-top: 50px;
+	margin-top: 25px;
 }
 
-.trailTitle{
+.parkTitle{
 	font-size: 18px;
 	text-decoration: underline;
 	padding: 10px;
@@ -150,7 +153,19 @@ p{
 	background: #225fa8;
 	color: white;
 }
-
+.tdthirty{
+	width:30%;
+}
+.tdseventy{
+	width:70%;
+}
+td{
+	line-height:24px;
+}
+.trailTitle{
+	text-decoration: underline;
+	padding-top: 10px;
+}
 
 
 

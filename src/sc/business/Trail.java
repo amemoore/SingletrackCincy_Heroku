@@ -1,28 +1,44 @@
 package sc.business;
 
 public class Trail extends Park{
-	
+	private String parkName;
 	private String trailName;
 	private String trailLength;
 	private String difficulty;
 	private String terrain;
-	private String length;
-	private String obstacles;
+	private String features;
 	private String direction;
 	private String notes;
 	
 	public Trail(){
 	}
 
-	public Trail(String trailNameIn, String trailLengthIn, String difficultyIn, String terrainIn, String obstaclesIn, String directionIn) {
+	public Trail(String trailNameIn, String trailLengthIn, String difficultyIn, String terrainIn, 
+			String featuresIn, String directionIn, String notesIn) {
 		trailName = trailNameIn;
 		trailLength = trailLengthIn;
 		difficulty = difficultyIn;
 		terrain = terrainIn;
-		obstacles = obstaclesIn;
+		features = featuresIn;
 		direction = directionIn;
+		notes = notesIn;
+	}
+	public Trail(String parkNameIn, String trailNameIn, String trailLengthIn, String difficultyIn, 
+			String terrainIn, String featuresIn, String directionIn, String notesIn) {
+		parkName = parkNameIn;
+		trailName = trailNameIn;
+		trailLength = trailLengthIn;
+		difficulty = difficultyIn;
+		terrain = terrainIn;
+		features = featuresIn;
+		direction = directionIn;
+		notes = notesIn;
 	}
 	
+	public String getParkName() {
+		return parkName;
+	}
+
 	public String getTrailName() {
 		return trailName;
 	}
@@ -55,20 +71,12 @@ public class Trail extends Park{
 		this.terrain = terrain;
 	}
 
-	public String getLength() {
-		return length;
-	}
-
-	public void setLength(String length) {
-		this.length = length;
-	}
-
 	public String getObstacles() {
-		return obstacles;
+		return features;
 	}
 
-	public void setObstacles(String obstacles) {
-		this.obstacles = obstacles;
+	public void setObstacles(String features) {
+		this.features = features;
 	}
 
 	public String getDirection() {

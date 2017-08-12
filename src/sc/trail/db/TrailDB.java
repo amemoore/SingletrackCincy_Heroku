@@ -28,9 +28,10 @@ public class TrailDB implements TrailDAO{
 		                String trailLength = rs.getString(4);
 						String difficulty = rs.getString(5);
 						String terrain = rs.getString(6);
-						String obstacles = rs.getString(7);
-						String direction = rs.getString(8);
-		                t = new Trail(trailName, trailLength, difficulty, terrain, obstacles, direction);
+						String direction = rs.getString(7);
+						String notes = rs.getString(8);
+						String features = rs.getString(9);
+		                t = new Trail(trailName, trailLength, difficulty, terrain, features, direction, notes);
 		                trails.add(t);
 		        	}
 		        } 
@@ -51,14 +52,15 @@ public class TrailDB implements TrailDAO{
 							ps.setString(1,  difficultyLevel); 
 							ResultSet rs = ps.executeQuery();
 		        	while (rs.next()){
-		        		String trailName = rs.getString(2);
-		                String trailLength = rs.getString(3);
-						String difficulty = rs.getString(4);
-						String terrain = rs.getString(5);
-						String length = rs.getString(6);
-						String obstacles = rs.getString(7);
-						String direction = rs.getString(8);
-		                t = new Trail(trailName, trailLength, difficulty, terrain, obstacles, direction);
+		        		String parkName = rs.getString(2);
+		        		String trailName = rs.getString(3);
+		                String trailLength = rs.getString(4);
+						String difficulty = rs.getString(5);
+						String terrain = rs.getString(6);
+						String direction = rs.getString(7);
+						String notes = rs.getString(8);
+						String features = rs.getString(9);
+		                t = new Trail(parkName, trailName, trailLength, difficulty, terrain, direction, notes, features);
 		                trails.add(t);
 		        	}
 		        } 
@@ -79,13 +81,15 @@ public class TrailDB implements TrailDAO{
 							ps.setString(1,  area); 
 							ResultSet rs = ps.executeQuery();
 		        	while (rs.next()){
-		        		String trailName = rs.getString(2);
-		                String trailLength = rs.getString(3);
-						String difficulty = rs.getString(4);
-						String terrain = rs.getString(5);
-						String obstacles = rs.getString(7);
-						String direction = rs.getString(8);
-		                t = new Trail(trailName, trailLength, difficulty, terrain, obstacles, direction);
+		        		String parkName = rs.getString(2);
+		        		String trailName = rs.getString(3);
+		                String trailLength = rs.getString(4);
+						String difficulty = rs.getString(5);
+						String terrain = rs.getString(6);
+						String direction = rs.getString(7);
+						String notes = rs.getString(8);
+						String features = rs.getString(9);
+		                t = new Trail(parkName, trailName, trailLength, difficulty, terrain, direction, notes, features);
 		                trails.add(t);
 		        	}
 		        } 
@@ -104,14 +108,15 @@ public class TrailDB implements TrailDAO{
 						PreparedStatement ps = connection.prepareStatement(sql)){
 							ResultSet rs = ps.executeQuery();
 		        	while (rs.next()){
-		        		String trailName = rs.getString(2);
-		                String trailLength = rs.getString(3);
-						String difficulty = rs.getString(4);
-						String terrain = rs.getString(5);
-						String length = rs.getString(6);
-						String features = rs.getString(7);
-						String direction = rs.getString(8);
-		                t = new Trail(trailName, trailLength, difficulty, terrain, features, direction);
+		        		String parkName = rs.getString(2);
+		        		String trailName = rs.getString(3);
+		                String trailLength = rs.getString(4);
+						String difficulty = rs.getString(5);
+						String terrain = rs.getString(6);
+						String direction = rs.getString(7);
+						String notes = rs.getString(8);
+						String features = rs.getString(9);
+		                t = new Trail(parkName, trailName, trailLength, difficulty, terrain, direction, notes, features);
 		                trails.add(t);
 		        	}
 		        } 
