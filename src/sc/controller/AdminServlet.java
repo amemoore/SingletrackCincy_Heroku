@@ -50,42 +50,38 @@ public class AdminServlet extends HttpServlet {
 		Trail t;
 		LinkedList<Trail> trails=new LinkedList<>();
 		
-		if (userName!=null && email!=null){
-			if (userName.equals("AwesomeAdmin")&& (email.equals("awesomeadmin@gmail.com"))){
+		if (userName==null && email==null){
+			
+			if((parkNamePark!=null || !parkNamePark.isEmpty()) && (area!=null ||!area.isEmpty())
+					&& (address!=null || !address.isEmpty()) && (restrooms!=null || !restrooms.isEmpty())
+					&& (parkDistrict!=null || !parkDistrict.isEmpty())){
+				p = new Park(parkNamePark, area, address, other, restrooms, parkDistrict);
+				parks.add(p);
+				request.setAttribute("new park", p);
+				url="/adminconfirmation.jsp";
+			}
+			else if((parkNameTrail!=null || !parkNameTrail.isEmpty()) && (trailName!=null ||!trailName.isEmpty())
+					&& (trailLength!=null || !trailLength.isEmpty()) && (difficulty!=null || !difficulty.isEmpty())
+					&& (terrain!=null || !terrain.isEmpty()) && (direction!=null || !direction.isEmpty())){
+				t = new Trail(parkNameTrail, trailName, trailLength, difficulty, terrain, features, direction, notes);
+				trails.add(t);
+				request.setAttribute("new trail", t);
+				url="/adminconfirmation.jsp";
+			}
+			else{
+				message="Please fill out all required fields.";
+				url="admin.jsp";
+			}
+		}
+		else if (userName.equals("AwesomeAdmin")&& (email.equals("awesomeadmin@gmail.com"))){
 				message="You made it!";
 				request.setAttribute("message", message);
 				url="/admin.jsp";
 			}
-			else{
-				//Message Here
+		else{
+				message="Invalid entry or incompleted fields.";
 				url="/index.html";
 			}
-		}
-		else if((parkNamePark!=null || !parkNamePark.isEmpty()) && (area!=null ||!area.isEmpty())
-				&& (address!=null || !address.isEmpty()) && (restrooms!=null || !restrooms.isEmpty())
-				&& (parkDistrict!=null || !parkDistrict.isEmpty())){
-			p = new Park(parkNamePark, area, address, other, restrooms, parkDistrict);
-			parks.add(p);
-			request.setAttribute("new park", p);
-			url="/adminconfirmation.jsp";
-		}
-		else if((parkNameTrail!=null || !parkNameTrail.isEmpty()) && (trailName!=null ||!trailName.isEmpty())
-				&& (trailLength!=null || !trailLength.isEmpty()) && (difficulty!=null || !difficulty.isEmpty())
-				&& (terrain!=null || !terrain.isEmpty()) && (direction!=null || !direction.isEmpty())){
-			t = new Trail(parkNameTrail, trailName, trailLength, difficulty, terrain, features, direction, notes);
-			trails.add(t);
-			request.setAttribute("new trail", t);
-			url="/adminconfirmation.jsp";
-		}
-		else{
-			//Message Here
-			url="admin.jsp";
-		}
-		
-		
-		
-		
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}
-
 }

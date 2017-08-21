@@ -31,6 +31,7 @@ public class MainServlet extends HttpServlet {
 		String nameDropDown = (String) request.getParameter("namedropdown");
 		String areaDropDown = (String) request.getParameter("areadropdown");
 		String difficultyDropDown = (String) request.getParameter("leveldropdown");
+		String searchAgain = (String) request.getParameter("searchagain");
 		
 	//DIRECTING TO A PARK JSP
 		if (nameDropDown!=null){
@@ -68,7 +69,7 @@ public class MainServlet extends HttpServlet {
 					} 
 		}
 		
-	//DIRECTIN TO AN AREA JSP
+	//DIRECTING TO AN AREA JSP
 		else if (areaDropDown!=null){
 				if (areaDropDown.equals("NE")){
 					url = "/ne.jsp";
@@ -82,7 +83,12 @@ public class MainServlet extends HttpServlet {
 				else if (areaDropDown.equals("SW")){
 					url = "/sw.jsp";
 				} 
-	}
+		}
+	
+	//DIRECTING BACK TO HOME PAGE
+		else if (searchAgain!=null){
+			url="/index.html";
+		}
 		
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}

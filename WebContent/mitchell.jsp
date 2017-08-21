@@ -47,9 +47,6 @@
 				    </div>
   			</div>
 		
-		
-		
-		
 			<div class="container-fluid bg-3 text-center">  
 				<div class="col-sm-2"></div>
 				<div class="col-sm-8">
@@ -94,13 +91,14 @@
 				    </div>
 				    
 				    <div class="col-sm-3">
+				    	<form action="index.html" >
+    						<input type="submit" name="comments" value="Home/Search Again" />
+						</form>
 				    </div>
 				  </div>
 				</div><br>
 			
 		<section class="jspBottom">
-		
-		
 		
 		</section>
 	</main>

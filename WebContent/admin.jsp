@@ -9,7 +9,6 @@
 
 <body>
 <h1> In the Admin JSP</h1>
-<p>${message}</p>
 <!-- WIP - Space for Admin to add, delete, and update parks, trails, comments -->
 
 
@@ -21,6 +20,8 @@
 <a href="modPark.jsp">Modify Park</a>
 <a href="modTrail.jsp">Modify Trail</a>
 <a href="logout.jsp">Log out</a>
+
+<h3>${message}</h3>
 
 <h2>Add a Park</h2>
 		<form action="AdminServlet" method="post">
@@ -46,9 +47,6 @@
 		  Notes: <input type="text" name="notesT"><br>
 		  <input type="submit" value="Submit">
 		</form>
-		
-
-
 
 </body>
 </html>
