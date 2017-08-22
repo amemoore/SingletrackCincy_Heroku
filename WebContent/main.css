@@ -2,131 +2,91 @@
 
 /* FOR ALL SECTIONS */
 
-.half-width{
-	width:40%;
-	float:left;
-	color: white;
-	padding: 0 5%;
+p{
+	padding-top:20px;
+	padding-bottom:40px;
+	text-align:left;
 }
-
-.full-width{
-	width:100%;
-	color: white;
+#buttons{
+	padding-top:30px;
 }
-
-.white{
+#traillist{
+	padding-left:20%;
+	text-align:left;
+}
+.h3extrasjsp{
+	text-decoration:underline;
+	padding-left:15%;
+	text-align:left;
 	color:white;
 }
 
-h1, h2, h3, h4{
-	margin: 0 auto;
-	color: white;
-	text-align: center;
-	padding-top: 20px;
-} 
-
-p{
-	color: white;
-}
-
-.centerText{
-	text-align: center;
-}
-
-/* LANDING PAGE HEADER SECTION */
-
+/* LANDING PAGE */
 .top{
 	background-image: url("images/fatbike2.jpg");
 	height: 350px;
 	margin: 0 auto;
-	border-bottom: solid #912636 5px;
 }
-
-#toptitle{
-	font-family: verdana, Sans-serif;
-	font-size: 30px;
-	text-align:center;
- 	padding-top:50px; 
-	color:white;
-	margin: 0 auto;
-	width: 20%;
-	float: left;
-}
-
-/* LANDING PAGE MAIN SECTION */
-
 .mainSection{
 	height:400px;
 	background-color: #3b3b3b;
 	margin: 0 auto;
-}
-
-.searchBoxes{
-	margin-top:20px;
-	margin-bottom: 20px;
-	text-align: center;
 	color: white;
 }
-
+.h3extraslanding{
+	text-decoration:underline;
+	padding-left:15%;
+	text-align:center;
+	color:white;
+}
 #dropDowns{
 	width: 175px;
 }
-
-/* LANDING PAGE FOOTER SECTION */
-
 .bottom{
 	height:250px;
-	background-color: #912636;
+	background-color: #efefef;
 	margin: 0 auto;
 }
-
+.bottomTitles{
+	padding-top: 5%;
+}
 .admin{
 	margin: 0 auto;
 	text-align: center;
-	color: white;
-	padding-top: 15px;
+	padding-top: 2%;
 }
-
-.commentsTitle{
-	padding-top: 50px;
-	padding-bottom:25px;
-}
-
 .comments{
 	margin: 0 auto;
 	text-align: center;
-	color: white;
-	padding-top: 15px;
+	padding-top: 2%;
 }
-
 #copyright {
     text-align: center;
     clear:all;
-    padding-top: 80px;
+    padding-top:2%;
+    color:black;
 }
 
 /* JSP PAGES */
-
 .jspTop{
 	background-image: url("images/mountain-bike-med.jpg");
-	background-image: cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-color:#3b3b3b;
 	height: 300px;
 	margin: 0 auto;
 }
-
 .jspMain{
 	background-color:#3b3b3b;
-	margin: 0 auto;
-	padding-bottom: 100px;
+	margin:0 auto;
+	padding-bottom:100px;
+	color:white;
 }
-
 #jspTYCommentPage{
 	background-color:#3b3b3b;
 	margin: 0 auto;
 	height: 350px;
 }
-
-
 .jspInputTextArea{
 	width: 100%;
 	text-align: center;
@@ -137,30 +97,14 @@ p{
     text-align: center;
 	color:white;
 }
-
-.jspTables{
-	color: white;
-	margin-top: 25px;
-}
-
 .parkTitle{
 	font-size: 18px;
 	text-decoration: underline;
 	padding: 10px;
 }
-
 #webBackground{
 	background: #225fa8;
 	color: white;
-}
-.tdthirty{
-	width:30%;
-}
-.tdseventy{
-	width:70%;
-}
-td{
-	line-height:24px;
 }
 .trailTitle{
 	text-decoration: underline;
