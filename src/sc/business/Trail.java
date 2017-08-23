@@ -71,11 +71,11 @@ public class Trail extends Park{
 		this.terrain = terrain;
 	}
 
-	public String getObstacles() {
+	public String getFeatures() {
 		return features;
 	}
 
-	public void setObstacles(String features) {
+	public void setFeatures(String features) {
 		this.features = features;
 	}
 
@@ -95,8 +95,4 @@ public class Trail extends Park{
 		this.notes = notes;
 	}
 
-	public String getFeatures() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

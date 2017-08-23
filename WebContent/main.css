@@ -20,6 +20,9 @@ p{
 	text-align:left;
 	color:white;
 }
+.blacktext{
+	color:black;
+}
 
 /* LANDING PAGE */
 .top{
@@ -28,10 +31,11 @@ p{
 	margin: 0 auto;
 }
 .mainSection{
-	height:400px;
+/* 	height:500px; */
 	background-color: #3b3b3b;
 	margin: 0 auto;
 	color: white;
+	padding-bottom:5%;
 }
 .h3extraslanding{
 	text-decoration:underline;
@@ -49,16 +53,19 @@ p{
 }
 .bottomTitles{
 	padding-top: 5%;
+	color:black;
 }
 .admin{
 	margin: 0 auto;
 	text-align: center;
 	padding-top: 2%;
+	color:black;
 }
 .comments{
 	margin: 0 auto;
 	text-align: center;
 	padding-top: 2%;
+	color:black;
 }
 #copyright {
     text-align: center;
