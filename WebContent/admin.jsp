@@ -24,8 +24,8 @@
 			    </div>
 			    <div class="collapse navbar-collapse" id="myNavbar">
 			      <ul class="nav navbar-nav navbar-right">
-			        <li><a href="#about">HOME</a></li>
-			        <li><a href="#services">PRINT LIST</a></li>
+			       <li><a href="/SingletrackCincy/index.html">HOME</a></li>
+		        <li><a href="/SingletrackCincy/print.jsp">PRINT LIST</a></li>
 			      </ul>
 			    </div>
 			  </div>
@@ -41,29 +41,17 @@
   			<div class="container text-left">
 			<h3>${message}</h3>
 			
-			<h2>Add a Park</h2>
-					<form action="AdminServlet" method="post">
-					  Park Name: <input type="text" name="parknameP"><br><br>
-					  Area: <input type="text" name="areaP"><br><br>
-					  Address: <input type="text" name="addressP"><br><br>
-					  Other: <input type="text" name="otherP"><br><br>
-					  Restrooms: <input type="text" name="restroomsP"><br><br>
-					  Park District: <input type="text" name="parkDistrictP"><br><br>
-					  Area Description: <input type="text" name="areadescriptionP"><br><br>
-					  <input type="submit" class="btn btn-primary" value="Submit"><br>
-					</form>
-					
 			<h2>Add a Trail</h2>
 					<form action="AdminServlet" method="post">
-					  Park Name: <input type="text" name="parknameT"><br><br>
-					  Trail Name: <input type="text" name="trailnameT"><br><br>
-					  Trail Length: <input type="text" name="traillengthT"><br><br>
-					  Difficulty: <input type="text" name="difficultyT"><br><br>
-					  Terrain: <input type="text" name="terrainT"><br><br>
-					  Features: <input type="text" name="featuresT"><br><br>
-					  Direction: <input type="text" name="directionT"><br><br>
-					  Notes: <input type="text" name="notesT"><br><br>
-					  <input type="submit" class="btn btn-primary" value="Submit"><br>
+					  Park Name: <input type="text" name="parknameT" class="blacktext"><br><br>
+					  Trail Name: <input type="text" name="trailnameT" class="blacktext"><br><br>
+					  Trail Length: <input type="text" name="traillengthT" class="blacktext"><br><br>
+					  Difficulty: <input type="text" name="difficultyT" class="blacktext"><br><br>
+					  Terrain: <input type="text" name="terrainT" class="blacktext"><br><br>
+					  Features: <input type="text" name="featuresT" class="blacktext"><br><br>
+					  Direction: <input type="text" name="directionT" class="blacktext"><br><br>
+					  Notes: <input type="text" name="notesT" class="blacktext"><br><br>
+					  <input type="submit" class="btn btn-primary" value="Submit" class="blacktext"><br>
 					</form>
 			</div>
 		</div>

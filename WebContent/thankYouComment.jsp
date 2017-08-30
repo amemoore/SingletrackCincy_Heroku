@@ -23,8 +23,8 @@
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#about">HOME</a></li>
-		        <li><a href="#services">PRINT LIST</a></li>
+		        <li><a href="/SingletrackCincy/index.html">HOME</a></li>
+		        <li><a href="/SingletrackCincy/print.jsp">PRINT LIST</a></li>
 		      </ul>
 		    </div>
 		  </div>

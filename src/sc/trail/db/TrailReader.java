@@ -8,4 +8,5 @@ public interface TrailReader {
 	LinkedList<Trail> getTrailsByDifficultyLevel(String difficultyLevel);
 	LinkedList<Trail> getTrailsByArea(String area);
 	LinkedList<Trail> getAllTrails();
+	Trail getTrailByTrailName(String tname);
 }

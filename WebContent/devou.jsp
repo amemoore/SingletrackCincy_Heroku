@@ -25,8 +25,8 @@
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#about">HOME</a></li>
-		        <li><a href="#services">PRINT LIST</a></li>
+		        <li><a href="/SingletrackCincy/index.html">HOME</a></li>
+		        <li><a href="/SingletrackCincy/print.jsp">PRINT LIST</a></li>
 		      </ul>
 		    </div>
 		  </div>
@@ -81,8 +81,9 @@
 										<span>Length:<%=t.getTrailLength()%></span><br>
 										<span>Terrain:<%=t.getTerrain()%></span><br>
 										<span>Features:<%=t.getFeatures()%></span><br><br>
-										<form action="PrintServlet" >
-    										<input type="submit" class="btn btn-primary" name="addtoprintlist" value="Add to print list" />
+										<form  method="POST" action="PrintServlet">
+											<input type="hidden" name="addtrail" value="<%=t.getTrailName()%>">
+											<button type="submit" class="btn btn-primary btn-sm">Add to Print List</button>
 										</form>
 										<br>
 									<%

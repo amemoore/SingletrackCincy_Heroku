@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import sc.business.Park;
 import sc.business.Trail;
+import sc.factory.Factory;
+import sc.trail.db.TrailDAO;
 
 @WebServlet("/AdminServlet")
 public class AdminServlet extends HttpServlet {
@@ -26,43 +28,31 @@ public class AdminServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url="/index.html";
+		String message="";
 		String userName = (String) request.getParameter("username");
 		String email = (String) request.getParameter("email");
-		
-		String parkNamePark = (String) request.getParameter("parknameP");
-		String area = (String) request.getParameter("areaP");
-		String address = (String) request.getParameter("addressP");
-		String other = (String) request.getParameter("otherP");
-		String restrooms = (String) request.getParameter("restroomsP");
-		String parkDistrict = (String) request.getParameter("parkdistrictP");
-		
 		String parkNameTrail = (String) request.getParameter("parknameT");
 		String trailName = (String) request.getParameter("trailnameT");
-		String trailLength = (String) request.getParameter("parknameT");
-		String difficulty = (String) request.getParameter("parknameT");
-		String terrain = (String) request.getParameter("parknameT");
-		String features = (String) request.getParameter("parknameT");
-		String direction = (String) request.getParameter("parknameT");
-		String notes= (String) request.getParameter("parknameT");
-		String message="";
-		Park p;
-		LinkedList<Park> parks=new LinkedList<>();
+		String trailLength = (String) request.getParameter("traillengthT");
+		String difficulty = (String) request.getParameter("difficultyT");
+		String terrain = (String) request.getParameter("terrainT");
+		String features = (String) request.getParameter("featuresT");
+		String direction = (String) request.getParameter("directionT");
+		String notes= (String) request.getParameter("notesT");
 		Trail t;
 		LinkedList<Trail> trails=new LinkedList<>();
+		TrailDAO trailsDAO=Factory.getTrailDAO();
 		
 		if (userName==null && email==null){
 			
-			if(parkNamePark!=null && area!=null && address!=null && restrooms!=null && parkDistrict!=null){
-				p = new Park(parkNamePark, area, address, other, restrooms, parkDistrict);
-				parks.add(p);
-				request.setAttribute("new park", p);
-				url="/adminconfirmation.jsp";
-			}
-			else if(parkNameTrail!=null && trailName!=null && trailLength!=null && difficulty!=null 
+			if(parkNameTrail!=null && trailName!=null && trailLength!=null && difficulty!=null 
 					&& terrain!=null && direction!=null){
 				t = new Trail(parkNameTrail, trailName, trailLength, difficulty, terrain, features, direction, notes);
 				trails.add(t);
-				request.setAttribute("new trail", t);
+				trailsDAO.addTrail(t);
+				request.setAttribute("newtrail", t);
+				message = "trail";
+				request.setAttribute("message", message);
 				url="/adminconfirmation.jsp";
 			}
 			else{

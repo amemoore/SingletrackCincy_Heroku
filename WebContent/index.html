@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<title>STCincy</title>
+	<title>Singletrack Cincy</title>
 </head>
 
 <body>
@@ -19,12 +19,12 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span> 
 		      </button>
-		      <span class="navbar-text">SINGLETRACK CINCY</span>
+		      <span class="navbar-text">Singletrack Cincy</span>
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#about">HOME</a></li>
-		        <li><a href="#services">PRINT LIST</a></li>
+		        <li><a href="/SingletrackCincy/index.html">HOME</a></li>
+		        <li><a href="/SingletrackCincy/print.jsp">PRINT LIST</a></li>
 		      </ul>
 		    </div>
 		  </div>
@@ -33,22 +33,23 @@
 		<div class="top" >
 		</div>
 	</header>
-		    
 	<main>
 		    <div class="mainSection">
 			    <div class="container text-center">
-			    	<h2 >Singletrack Cincy - Find your trail</h2>
+			    	<h2 >Singletrack Cincy</h2>
 			    </div>
 			    <div class="container text-center">
 				    <div class="row">
 						<div class="col-sm-6">
 				    		<p>Welcome to Singletrack Cincy.  The Cincinnati area includes Ohio, Kentucky, and Indiana
-				    		and hosts an array of trails for all abilities.  This is a one-stop shop to find any trail in
-				    		the greater Cincinnati area.
+				    		and hosts an array of mountain biking trails for all abilities.  This is a one-stop shop to 
+				    		find any trail in the greater Cincinnati area.<br>
+				    		Please note: I am working on functionality before adding trails and detailed information
+				    		to the database. If you have any suggestions or feedback, feel free to leave below.
 				    		</p>
 				    	</div>
 						<div class="col-sm-6 text-left">
-				    		<h3 class="h3extraslanding">Select Your Trail</h3><br><br>
+				    		<h3 class="h3extraslanding">Find Your Trail</h3><br><br>
 							 <form action="MainServlet" method="get" class="text-center">
 								<label for="namedropdown" id="namedropdown">By Park Name:</label>    
 								<select name="namedropdown" id="dropDowns"  class="blacktext">
@@ -80,13 +81,12 @@
 									    <option value="NW">Northwest</option>
 									    <option value="SW">Southwest</option>
 									</select>
-									<input type="submit" class="btn btn-primary" value="Submit">
+									<input type="submit"  disabled class="btn btn-primary" value="Submit">
 								</form>
 						</div>
 				</div>
 			</div>
 		</main>
-		
 		<footer>
 			<div class="bottom">
 				<div class="row">

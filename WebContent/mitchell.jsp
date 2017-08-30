@@ -25,8 +25,8 @@
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#about">HOME</a></li>
-		        <li><a href="#services">PRINT LIST</a></li>
+		        <li><a href="/SingletrackCincy/index.html">HOME</a></li>
+		        <li><a href="/SingletrackCincy/print.jsp">PRINT LIST</a></li>
 		      </ul>
 		    </div>
 		  </div>
@@ -79,15 +79,20 @@
 										LinkedList<Trail> currentTrails = (LinkedList<Trail>)request.getAttribute("trails");
 											for (Trail t: currentTrails){
 									%>
-										<span><strong><%=t.getTrailName()%></strong></span><br>
+										<span><strong></strong></span><br>
+										<span>Trail Name:<%=t.getTrailName()%></span><br>
 										<span>Difficulty:<%=t.getDifficulty()%></span><br>
 										<span> Length:<%=t.getTrailLength()%></span><br>
 										<span>Terrain:<%=t.getTerrain()%></span><br>
 										<span>Features:<%=t.getFeatures()%></span><br><br>
-										<form action="PrintServlet" >
-    										<input type="submit" class="btn btn-primary" name="addtoprintlist" value="Add to print list" />
-										</form>
+<%--      									<a href="/SingletrackCincy/PrintServlet?action=addtrail&trailName=<%=t.getTrailName()%>">Add to Print List</a><br><br>  --%>
+<%-- 										<a href="/PRS_Web/CreateRequest?action=SelectProduct&pId=<%=p.getProductID()%>"> <%=p.getProductID()%> </a> --%>
 										<br>
+										<form  method="POST" action="PrintServlet">
+											<input type="hidden" name="addtrail" value="<%=t.getTrailName()%>">
+											<button type="submit" class="btn btn-primary btn-sm">Add to Print List</button>
+										</form>
+
 									<%
 										} 
 									%>
